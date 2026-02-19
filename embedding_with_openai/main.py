@@ -33,6 +33,7 @@ def main():
         {"messages": [{"role": "user", "content": query}]},
         stream_mode="values",
     ):
+        print(step)
         step["messages"][-1].pretty_print()
 
 if __name__ == "__main__":

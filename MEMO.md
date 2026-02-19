@@ -90,3 +90,15 @@ Task decomposition is a process where a complicated task is broken down into sma
 
 toolデコレータはpydocsとかを取得したりして面白いのでコードを追うといいらしい
 
+@tool(response_format="content_and_artifact")
+↑のartifactはaiに渡さないプログラム用のデータ
+
+```python
+Name: retrieve_context
+
+Source: {'source': 'https://lilianweng.github.io/posts/2023-06-23-agent/', 'start_index': 2578}
+Content: Task decomposition can be done (1) by LLM with simple prompting like "Steps for XYZ.\n1.", "What are the subgoals for achieving XYZ?", (2) by using task-specific instructions; e.g. "Write a story outline." for writing a novel, or (3) with human inputs.
+Another quite distinct approach, LLM+P (Liu et al. 2023), involves relying on an external classical planner to do long-horizon planning. This approach utilizes the Planning Domain Definition Language (PDDL) as an intermediate interface to describe the planning problem. In this process, LLM (1) translates the problem into “Problem PDDL”, then (2) requests a classical planner to generate a PDDL plan based on an existing “Domain PDDL”, and finally (3) translates the PDDL plan back into natural language. Essentially, the planning step is outsourced to an external tool, assuming the availability of domain-specific PDDL and a suitable planner which is common in certain robotic setups but not in many other domains.
+Self-Reflection#
+```
+このsourceがartifactに相当
