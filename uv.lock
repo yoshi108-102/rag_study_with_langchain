@@ -1143,6 +1143,7 @@ dependencies = [
     { name = "bs4" },
     { name = "langchain" },
     { name = "langchain-community" },
+    { name = "langchain-core" },
     { name = "langchain-text-splitters" },
 ]
 
@@ -1151,6 +1152,7 @@ requires-dist = [
     { name = "bs4", specifier = ">=0.0.2" },
     { name = "langchain", specifier = ">=1.2.10" },
     { name = "langchain-community", specifier = ">=0.4.1" },
+    { name = "langchain-core", specifier = ">=1.2.13" },
     { name = "langchain-text-splitters", specifier = ">=1.1.1" },
 ]
 
