@@ -88,3 +88,5 @@ Task decomposition is a process where a complicated task is broken down into sma
 
 普通にopenaiのエンコーダに通せばベクトライズされるんじゃね？？？多分そう。
 
+toolデコレータはpydocsとかを取得したりして面白いのでコードを追うといいらしい
+
