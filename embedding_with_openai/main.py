@@ -4,7 +4,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_community.document_loaders import WebBaseLoader
 import bs4
-from src import fetch_docs, split_text, retrieve_context
+from src import fetch_docs, split_text, create_retrieve_context_tool
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 
@@ -19,6 +19,7 @@ def main():
     vector_store = InMemoryVectorStore(embedding=embedding)
     document_ids = vector_store.add_documents(chunks)
     
+    retrieve_context = create_retrieve_context_tool(vector_store)
     tools = [retrieve_context]
     
     prompt = (
