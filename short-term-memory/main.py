@@ -59,7 +59,7 @@ checkpointer = InMemorySaver()
 
 agent = create_agent(
     "gpt-5",
-    tools=[get_user_info],
+    tools=[get_user_info, inspect_runtime],
     state_schema=CustomAgentState,
     checkpointer=checkpointer,
 )
@@ -71,6 +71,7 @@ config = {"configurable": {"thread_id": thread_id}}
 conversations = [
     "Hello, who am I?",
     "What theme do I prefer?",
+    "Use the inspect_runtime tool to show me the current runtime state.",
     "Thanks! Can you remember what we talked about?",
 ]
 
